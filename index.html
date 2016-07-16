@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="web3.min.js"></script>
+      <script src="js/web3.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <script src="js/bootstrap.min.js"></script>
       <link rel="icon" type="image/png" href="/favicon.png"/>
+      <script src="js/jquery.min.js"></script>
 
     <title>Ethereum Simple Storage Example</title>
   </head>
@@ -34,10 +35,9 @@
     <script>
 
     // set current provider
-          if(false && typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+          if(typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
             var web3 = new Web3(window.web3.currentProvider);
           } else {
-            
             var  web3 = new Web3(new Web3.providers.HttpProvider("http://10.0.3.174:8545"));
           }
 
@@ -60,10 +60,10 @@
    var p = simplestorageContract.at(Address);
    var returnValue = p.getValue().toString();
    console.log(returnValue);
-   document.getElementById("result").innerHTML=returnValue;
+   document.getElementById('result').innerHTML=returnValue;
  }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/jquery.min.js"></script>
+
   </body>
 </html>
