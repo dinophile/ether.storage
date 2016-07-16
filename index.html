@@ -7,7 +7,7 @@
       <script src="web3.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <script src="js/bootstrap.min.js"></script>
-
+      <link rel="icon" type="image/png" href="/favicon.png"/>
 
     <title>Ethereum Simple Storage Example</title>
   </head>
@@ -44,7 +44,7 @@ var  web3 = new Web3(new Web3.providers.HttpProvider("http://10.0.3.174:8545"));
 
 
     simplestorageContract = web3.eth.contract([{"constant":true,"inputs":[],"name":"getValue","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[{"name":"value","type":"string"}],"name":"setValue","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"oldValue","type":"string"},{"indexed":false,"name":"newValue","type":"string"}],"name":"valueChanged","type":"event"}]);
-    Address = "0x5DFbf7fFCF4D1ec5dcB1Aa0262C0a72f981F045d"
+    Address = "0x2271e22eE1AE5c5348Afb3A64B01a42E01e5E6A2"
 
 
 
